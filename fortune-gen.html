@@ -1,0 +1,59 @@
+<html lang="en">
+    <style type="text/css">
+    #main{
+
+    }
+     
+     #d1{
+         font-size: 50px;
+       text-align: center;
+    }
+    #d2{
+        text-align: center;
+        font-size: 40px;
+         color:tomato;
+    }
+    #d3{
+        
+        text-align: center;
+    }
+    button{
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 15px;
+        color: brown;
+    }
+       </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune</title>
+   
+</head>
+<body>
+    <div id="main" style="background-color:black;height: 200px;width: 100%;">
+
+        <div id="d1" style="background-color: sienna;height: 50px;width: 100%;">
+            <p>Text:</p>
+        </div>
+        <div id="d2">
+            <p id="p1">About</p>
+        </div>
+
+    </div>
+    <div id="d3">
+        <button type="button" onclick="fortune()">Click</button>
+    </div>
+   
+ 
+
+  <script>
+      function fortune()
+      {
+          var my=["i am riajul islam","I am a student","Live in Mirpur","Home town Brahmanbaria"];
+          var change=Math.floor(Math.random() * 4);
+          document.getElementById('p1').innerHTML=my[change];
+      }
+  </script>
+</body>
+</html>

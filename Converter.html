@@ -1,0 +1,67 @@
+<html lang="en">
+    <style>
+        #d1{
+            margin-top: 20;
+            text-align: center;
+            font-size: 20px;
+        }
+        #d2{
+         font-size: 50px;
+       text-align: center;
+    }
+
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert</title>
+</head>
+<body>
+    <div id="d2" style="background-color:chocolate;height: 80px;width: 100%;">
+        <p>Converter</p>
+
+    </div>
+  <form name="convert">
+       <div id="d1" style="background-color:cadetblue;height: 400px;width: 100%;">
+      <p> BD:</p> <input type="number" id="ed4" name="bd" onchange="bdconvert()"> <br>
+       <p> US Dollar:</p> <input type="number" id="ed4" name="us" onchange="usconvert()"><br>
+       <p> Euro:</p><input type="number" id="ed4" name="euro" onchange="euconvert()"><br>
+       <p> QR:</p><input type="number" id="ed4" name="Qatar" onchange="qtconvert()"> 
+       </div>
+      
+  </form>
+    
+  
+   
+
+    <script>
+        function bdconvert(){
+            
+            document.convert.Qatar.value=document.convert.bd.value*0.043;
+            document.convert.us.value=document.convert.bd.value*0.012;
+            document.convert.euro.value=document.convert.bd.value*0.011;      
+        }
+        function usconvert(){
+            
+            document.convert.bd.value=document.convert.us.value*84.93;
+            document.convert.Qatar.value=document.convert.us.value*3.64;
+            document.convert.euro.value=document.convert.us.value*0.92;      
+        }
+        function euconvert(){
+            
+            document.convert.Qatar.value=document.convert.euro.value*3.95;
+            document.convert.us.value=document.convert.euro.value*1.08;
+            document.convert.bd.value=document.convert.euro.value*92.05;      
+        }
+        function qtconvert(){
+            
+            document.convert.bd.value=document.convert.Qatar.value*23.31;
+            document.convert.us.value=document.convert.Qatar.value*0.27;
+            document.convert.euro.value=document.convert.Qatar.value*0.25;      
+        }
+    </script>
+
+</body>
+</html>
